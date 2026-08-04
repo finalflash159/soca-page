@@ -1,6 +1,6 @@
 # SoCa project page
 
-Static academic project page for [SoCa](https://github.com/finalflash159/shrike-7), a Vietnamese voice assistant with a local audio path, explicit local or remote LLM selection, evidence-aware retrieval, memory, and controlled workflows.
+Static academic project page for [SoCa](https://github.com/finalflash159/soca), a Vietnamese voice assistant with a local audio path, explicit local or remote LLM selection, evidence-aware retrieval, memory, and controlled workflows.
 
 The page follows the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) and keeps its required template and Nerfies attribution in the footer. It has no build step and no runtime dependency beyond the static assets checked into this repository.
 
@@ -28,7 +28,7 @@ The current metadata uses `https://soca-page.vercel.app/` as the provisional can
 
 The page is content-complete for the static project-page slice. The benchmark figures are copied from the private release repository's tracked benchmark assets, while the two video placements deliberately use a short neutral placeholder until a real private-vault demo recording is reviewed. The placeholder must be replaced before public launch; do not describe it as a real run.
 
-The page links to the source repository's [documentation](https://github.com/finalflash159/shrike-7/blob/main/docs/README.md) and [benchmark record](https://github.com/finalflash159/shrike-7/blob/main/BENCHMARKS.md) instead of duplicating the system documentation here.
+The page links to the SoCa repository's [documentation](https://github.com/finalflash159/soca/blob/main/docs/README.md) and [benchmark record](https://github.com/finalflash159/soca/blob/main/BENCHMARKS.md) instead of duplicating the system documentation here.
 
 ## License
 
