@@ -3,7 +3,7 @@
   --navy-deep: #0f2438;
   --ink: #17222d;
   --muted: #5f6d78;
-  --paper: #f7f8f6;
+  --paper: #ffffff;
   --panel: #ffffff;
   --line: #cbd4d9;
   --line-strong: #93a2ab;
@@ -184,12 +184,18 @@ a:hover {
   background: #e2e8f0;
 }
 
+.demo-first {
+  padding-top: 3.25rem;
+  padding-bottom: 3.5rem;
+}
+
 .teaser-frame {
   border-left: 5px solid var(--amber);
 }
 
 .demo-frame {
-  max-width: 1000px;
+  max-width: 1120px;
+  border-top: 5px solid var(--amber);
 }
 
 .video-status {
@@ -202,16 +208,18 @@ a:hover {
 }
 
 .benchmark-section {
-  background: var(--navy-deep);
-  color: #f1f4f6;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  background: #ffffff;
+  color: var(--ink);
 }
 
 .benchmark-section .section-title {
-  color: #fff;
+  color: var(--navy-deep);
 }
 
 .benchmark-section .section-lede {
-  color: #c4d0d8;
+  color: var(--muted);
 }
 
 .results-carousel {
@@ -315,7 +323,7 @@ a:hover {
 }
 
 .demo-section {
-  background: var(--amber-soft);
+  background: #ffffff;
 }
 
 .limitation-list ul {
@@ -341,8 +349,8 @@ a:hover {
   margin: 0;
   padding: 1.25rem 1.35rem;
   overflow-x: auto;
-  background: var(--navy-deep);
-  color: #f4dfb9;
+  background: #f1f4f2;
+  color: var(--navy-deep);
   font-family: var(--mono);
   font-size: 0.88rem;
   line-height: 1.6;
@@ -448,52 +456,6 @@ a:hover {
 
   .footer-grid p + p {
     margin-top: 1rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #10171d;
-    --panel: #16222b;
-    --ink: #e6edf1;
-    --muted: #aebcc5;
-    --line: #3a4b56;
-    --line-strong: #60737e;
-    --navy: #d8e4ea;
-    --navy-deep: #0b1218;
-    --amber-soft: #3b2f1f;
-  }
-
-  .project-hero,
-  .project-footer,
-  html {
-    background: var(--paper);
-  }
-
-  .project-title,
-  .section-title {
-    color: #f5f8fa !important;
-  }
-
-  .project-subtitle,
-  .figure-card figcaption strong,
-  .results-table td:nth-child(2),
-  a {
-    color: #f0c680;
-  }
-
-  .project-links .button.is-dark {
-    background: #d9e5eb !important;
-    color: #0f2438 !important;
-  }
-
-  .results-table tbody tr:nth-child(even) {
-    background: #1d2b34;
-  }
-
-  .copy-button {
-    background: #d9e5eb !important;
-    color: #0f2438 !important;
   }
 }
 
