@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SoCa is a measured Vietnamese voice assistant with an explicit local and remote runtime boundary, evidence-aware retrieval, memory, and controlled workflows.">
+  <meta name="author" content="Võ Minh Thịnh">
+  <meta property="og:title" content="SoCa — Vietnamese voice assistant">
+  <meta property="og:description" content="A measured project page for SoCa: Vietnamese ASR, controlled workflows, evidence-aware retrieval, memory, and speech output.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soca-page.vercel.app/">
+  <meta property="og:image" content="https://soca-page.vercel.app/static/images/placeholder-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SoCa — Vietnamese voice assistant">
+  <meta name="twitter:description" content="Measured system evidence and limitations for an offline-first Vietnamese voice assistant.">
+  <meta name="twitter:image" content="https://soca-page.vercel.app/static/images/placeholder-poster.jpg">
+  <link rel="canonical" href="https://soca-page.vercel.app/">
+  <link rel="icon" href="static/images/favicon.ico">
+  <title>SoCa — Vietnamese voice assistant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SoCa",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "macOS",
+    "description": "A Vietnamese voice assistant with local audio processing, explicit remote LLM selection, evidence-aware retrieval, memory, and controlled workflows.",
+    "url": "https://soca-page.vercel.app/",
+    "codeRepository": "https://github.com/finalflash159/shrike-7",
+    "author": {
+      "@type": "Person",
+      "name": "Võ Minh Thịnh"
+    }
+  }
+  </script>
+</head>
+<body>
+  <span id="top-sentinel" aria-hidden="true"></span>
+
+  <header class="hero project-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <p class="project-kicker">MEASURED SYSTEM · 2026</p>
+        <h1 class="title project-title">SoCa</h1>
+        <p class="subtitle project-subtitle">An offline-first Vietnamese voice agent</p>
+        <p class="project-byline">Sơn Ca · voice, retrieval, memory, and controlled workflows<br>Võ Minh Thịnh · self-directed project · 2026</p>
+        <div class="project-links" aria-label="Project links">
+          <a class="button is-dark is-rounded" href="https://github.com/finalflash159/shrike-7" target="_blank" rel="noreferrer"><span class="icon"><i class="fas fa-code" aria-hidden="true"></i></span><span>Code</span></a>
+          <a class="button is-dark is-rounded" href="https://github.com/finalflash159/shrike-7/blob/main/docs/README.md" target="_blank" rel="noreferrer"><span class="icon"><i class="fas fa-book-open" aria-hidden="true"></i></span><span>Docs</span></a>
+          <a class="button is-dark is-rounded" href="https://github.com/finalflash159/shrike-7/blob/main/BENCHMARKS.md" target="_blank" rel="noreferrer"><span class="icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span><span>Benchmarks</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-tight" aria-labelledby="teaser-heading">
+      <div class="container is-max-desktop">
+        <h2 id="teaser-heading" class="sr-only">System teaser</h2>
+        <div class="video-frame teaser-frame">
+          <video autoplay muted loop playsinline preload="metadata" poster="static/images/placeholder-poster.jpg" aria-label="SoCa project teaser placeholder">
+            <source src="static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <p class="video-status">Teaser recording pending · layout placeholder only</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="abstract-heading">
+      <div class="container is-max-desktop narrow-copy">
+        <h2 id="abstract-heading" class="section-title">Abstract</h2>
+        <div class="content abstract-copy">
+          <p>SoCa is a Vietnamese voice agent designed around a local audio path and an explicitly selected local or remote language model. Its runtime separates microphone input, VAD/AEC, ASR, a controlled workflow, tools and evidence-aware knowledge or memory, the selected LLM, and TTS playback. The knowledge path combines sparse retrieval with dense representations and keeps evidence, citations, and terminal outcomes observable instead of turning a weak match into a confident answer. Evaluation uses public speech and retrieval datasets together with private release manifests, real echo recordings, and reviewed conversational trajectories. The page reports what was measured, what remains blocked, and which boundaries are deliberate; it does not present a paper or claim general voice-assistant capability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section benchmark-section" aria-labelledby="benchmark-heading">
+      <div class="container is-max-desktop">
+        <h2 id="benchmark-heading" class="section-title">Selected measurements</h2>
+        <p class="section-lede">Three views of the release evidence: ASR disposition, retrieval evidence floors, and full-duplex interruption behavior.</p>
+        <div id="benchmark-carousel" class="carousel results-carousel" data-slides-to-scroll="1" data-slides-to-show="1">
+          <div class="item">
+            <figure class="figure-card">
+              <img src="static/images/carousel1.png" alt="Qwen3-ASR release qualification matrix comparing WER, latency, and resource measurements" loading="lazy">
+              <figcaption><strong>ASR release qualification.</strong> Qwen3-ASR 0.6B and 1.7B; pinned FLEURS-vi, private code-switch, and non-speech manifests; production qualification run in 2026.</figcaption>
+            </figure>
+          </div>
+          <div class="item">
+            <figure class="figure-card">
+              <img src="static/images/carousel2.png" alt="Retrieval evidence-floor benchmark comparing accepted evidence and false evidence" loading="lazy">
+              <figcaption><strong>Evidence floor.</strong> AITeamVN v2 retrieval; XQuAD grounding split with 12 answerable and 8 unanswerable questions; calibrated acceptance and false-evidence measurement.</figcaption>
+            </figure>
+          </div>
+          <div class="item">
+            <figure class="figure-card">
+              <img src="static/images/carousel3.png" alt="Conversation and barge-in benchmark under real echo" loading="lazy">
+              <figcaption><strong>Full-duplex behavior.</strong> AEC-Challenge real echo, 300 pairs, plus Vietnamese turn-taking scenarios; interruption detection, false interrupts, and premature close are measured separately.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="results-heading">
+      <div class="container is-max-desktop">
+        <h2 id="results-heading" class="section-title">Results</h2>
+        <p class="section-lede">Values below are copied from the repository benchmark record. Dataset revisions, commands, hardware, and unresolved gates remain in <a href="https://github.com/finalflash159/shrike-7/blob/main/BENCHMARKS.md" target="_blank" rel="noreferrer">BENCHMARKS.md</a>.</p>
+        <div class="table-wrap">
+          <table class="table is-fullwidth results-table">
+            <caption class="sr-only">Selected SoCa benchmark results</caption>
+            <thead>
+              <tr><th>Metric</th><th>Value</th><th>n</th><th>Dataset / measured</th><th>Date</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Qwen release FLEURS-vi WER</td><td>8.59%</td><td>30 utterances</td><td>FLEURS vi_vn production paired run</td><td>2026-08-02</td></tr>
+              <tr><td>Qwen release cold inference p95</td><td>691 ms</td><td>release matrix</td><td>qwen-release on Apple Silicon</td><td>2026-08-02</td></tr>
+              <tr><td>Retrieval Recall@5</td><td>0.9161</td><td>1,000 queries</td><td>TVPL · fusion selection</td><td>2026-07-30</td></tr>
+              <tr><td>Retrieval p95 per query</td><td>71.019 ms</td><td>1,000 queries</td><td>TVPL · production fusion candidate</td><td>2026-07-30</td></tr>
+              <tr><td>Unanswerable false evidence</td><td>0 / 8</td><td>20 questions</td><td>XQuAD grounding split</td><td>2026-07-31</td></tr>
+              <tr><td>Barge-in false interrupt</td><td>2.7%</td><td>300 pairs</td><td>AEC-Challenge real echo</td><td>2026-07-29</td></tr>
+              <tr><td>Barge-in detection</td><td>94.7%</td><td>300 pairs</td><td>AEC-Challenge real echo</td><td>2026-07-29</td></tr>
+              <tr><td>Turn-taking premature close</td><td>18.3%</td><td>120 timelines</td><td>Vietnamese turn-taking benchmark</td><td>2026-07-29</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" aria-labelledby="demo-heading">
+      <div class="container is-max-desktop">
+        <h2 id="demo-heading" class="section-title">Full demo</h2>
+        <p class="section-lede">The final recording is intentionally not fabricated. This short placeholder keeps the page structure reviewable until a real private-vault run is recorded and verified.</p>
+        <div class="video-frame demo-frame">
+          <video controls preload="metadata" poster="static/images/placeholder-poster.jpg" aria-label="SoCa full demo placeholder">
+            <source src="static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <p class="video-status">Real demo video pending · replace this asset before public launch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="limitations-heading">
+      <div class="container is-max-desktop narrow-copy">
+        <h2 id="limitations-heading" class="section-title">Limitations</h2>
+        <div class="content limitation-list">
+          <ul>
+            <li>Goal-level routing can still choose the wrong capability tier, so retrieval is not treated as proof that an end-to-end answer is correct; the real-vault false-evidence gate remains visible in the benchmark record.</li>
+            <li>Local audio qualification is currently centered on Apple Silicon; ARM/Linux and a complete hardware-microphone release run are not claimed here.</li>
+            <li>ASR confidence calibration is profile-specific. A model without its own calibration is not silently substituted with another model.</li>
+            <li>The production tool surface is intentionally small. Device control, weather, and broad external actions are outside this release page.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bibtex-section" aria-labelledby="bibtex-heading">
+      <div class="container is-max-desktop narrow-copy">
+        <h2 id="bibtex-heading" class="section-title">BibTeX</h2>
+        <div class="bibtex-box">
+          <pre id="bibtex-entry"><code>@software{vo2026soca,
+  author  = {Võ Minh Thịnh},
+  title   = {SoCa: A Vietnamese Voice Agent with Evidence-Aware Retrieval},
+  year    = {2026},
+  url     = {https://github.com/finalflash159/shrike-7}
+}</code></pre>
+          <button class="button is-small copy-button" type="button" data-copy-bibtex aria-label="Copy BibTeX entry">Copy</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer project-footer">
+    <div class="container is-max-desktop">
+      <div class="footer-grid">
+        <p>© 2026 Võ Minh Thịnh · SoCa project page</p>
+        <p>Template adapted from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noreferrer">Academic Project Page Template</a> and Nerfies. Released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-to-top" class="scroll-to-top" type="button" aria-label="Scroll to top">↑</button>
+
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/index.js"></script>
+</body>
+</html>
