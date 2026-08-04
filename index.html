@@ -18,11 +18,7 @@
   <link rel="icon" href="static/images/favicon.ico">
   <title>SoCa — Vietnamese voice assistant</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
@@ -49,10 +45,9 @@
   <header class="hero project-hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <p class="project-kicker">MEASURED SYSTEM · 2026</p>
         <h1 class="title project-title">SoCa</h1>
-        <p class="subtitle project-subtitle">A Vietnamese voice agent</p>
-        <p class="project-byline">Sơn Ca · voice, retrieval, memory, and controlled workflows<br>Võ Minh Thịnh · self-directed project · 2026</p>
+        <p class="subtitle project-subtitle">Vietnamese voice assistant</p>
+        <p class="project-byline"><span class="author-name">Võ Minh Thịnh</span><br><span class="project-context">Sơn Ca · retrieval, memory, and controlled workflows · 2026</span></p>
         <div class="project-links" aria-label="Project links">
           <a class="button is-dark is-rounded" href="https://github.com/finalflash159/soca" target="_blank" rel="noreferrer"><span class="icon"><i class="fas fa-code" aria-hidden="true"></i></span><span>Code</span></a>
           <a class="button is-dark is-rounded" href="https://github.com/finalflash159/soca/blob/main/docs/README.md" target="_blank" rel="noreferrer"><span class="icon"><i class="fas fa-book-open" aria-hidden="true"></i></span><span>Docs</span></a>
@@ -100,25 +95,39 @@
     <section class="section benchmark-section" aria-labelledby="benchmark-heading">
       <div class="container is-max-desktop">
         <h2 id="benchmark-heading" class="section-title">Benchmark evidence</h2>
-        <p class="section-lede">Three views of the release evidence: ASR qualification, retrieval evidence floors, and full-duplex interruption behavior.</p>
-        <div id="benchmark-carousel" class="carousel results-carousel" data-slides-to-scroll="1" data-slides-to-show="1">
-          <div class="item">
+        <p class="section-lede">Three measured views of SoCa's core runtime.</p>
+        <div id="benchmark-carousel" class="benchmark-carousel" tabindex="0" aria-roledescription="carousel" aria-label="SoCa benchmark evidence">
+          <div class="benchmark-stage">
+            <button class="benchmark-control benchmark-control-previous" type="button" data-carousel-prev aria-label="Previous benchmark image">‹</button>
+            <div class="benchmark-slides" aria-live="polite">
+          <div class="benchmark-slide is-active" data-slide="0">
             <figure class="figure-card">
               <img src="static/images/carousel1.png" alt="Qwen3-ASR release qualification matrix comparing WER, latency, and resource measurements" loading="lazy">
               <figcaption><strong>ASR release qualification.</strong> Qwen3-ASR 0.6B and 1.7B; pinned FLEURS-vi, private code-switch, and non-speech manifests; production qualification run in 2026.</figcaption>
             </figure>
           </div>
-          <div class="item">
+          <div class="benchmark-slide" data-slide="1" hidden>
             <figure class="figure-card">
               <img src="static/images/carousel2.png" alt="Retrieval evidence-floor benchmark comparing accepted evidence and false evidence" loading="lazy">
               <figcaption><strong>Evidence floor.</strong> AITeamVN v2 retrieval; XQuAD grounding split with 12 answerable and 8 unanswerable questions; calibrated acceptance and false-evidence measurement.</figcaption>
             </figure>
           </div>
-          <div class="item">
+          <div class="benchmark-slide" data-slide="2" hidden>
             <figure class="figure-card">
               <img src="static/images/carousel3.png" alt="Conversation and barge-in benchmark under real echo" loading="lazy">
               <figcaption><strong>Full-duplex behavior.</strong> AEC-Challenge real echo, 300 pairs, plus Vietnamese turn-taking scenarios; interruption detection, false interrupts, and premature close are measured separately.</figcaption>
             </figure>
+          </div>
+            </div>
+            <button class="benchmark-control benchmark-control-next" type="button" data-carousel-next aria-label="Next benchmark image">›</button>
+          </div>
+          <div class="benchmark-footer">
+            <div class="benchmark-dots" role="tablist" aria-label="Select benchmark image">
+              <button class="benchmark-dot is-active" type="button" data-carousel-dot="0" role="tab" aria-selected="true" aria-label="Show ASR benchmark"></button>
+              <button class="benchmark-dot" type="button" data-carousel-dot="1" role="tab" aria-selected="false" aria-label="Show retrieval benchmark"></button>
+              <button class="benchmark-dot" type="button" data-carousel-dot="2" role="tab" aria-selected="false" aria-label="Show full-duplex benchmark"></button>
+            </div>
+            <span class="benchmark-counter" aria-live="polite"><span data-carousel-current>1</span> / 3</span>
           </div>
         </div>
       </div>
@@ -190,7 +199,6 @@
 
   <button id="scroll-to-top" class="scroll-to-top" type="button" aria-label="Scroll to top">↑</button>
 
-  <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/index.js"></script>
 </body>
