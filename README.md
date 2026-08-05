@@ -26,7 +26,7 @@ The current metadata uses `https://soca-page.vercel.app/` as the provisional can
 
 ## Content status
 
-The page is content-complete for the static project-page slice. The benchmark figures are copied from the private release repository's tracked benchmark assets, while the two video placements deliberately use a short neutral placeholder until a real private-vault demo recording is reviewed. The placeholder must be replaced before public launch; do not describe it as a real run.
+The page includes the reviewed full demo and a short teaser hosted in a public Vercel Blob store. The videos are referenced by URL rather than committed to Git so the repository stays small while the page can serve the original recordings.
 
 The page links to the SoCa repository's [documentation](https://github.com/finalflash159/soca/blob/main/docs/README.md) and [benchmark record](https://github.com/finalflash159/soca/blob/main/BENCHMARKS.md) instead of duplicating the system documentation here.
 
